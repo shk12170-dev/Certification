@@ -1,0 +1,75 @@
+{
+  "updated": "2026-09-30",
+  "certs": [
+    {
+      "id": "network-manager-2",
+      "title": "네트워크관리사 2급",
+      "organizer": "한국정보통신자격협회(ICQA)",
+      "subjects": [
+        {
+          "order": 1,
+          "title": "네트워크 일반",
+          "file": "network-manager-2/01-network-basics.md",
+          "questions": "questions/network-manager-2/01-network-basics.json"
+        },
+        {
+          "order": 2,
+          "title": "TCP/IP",
+          "file": "network-manager-2/02-tcpip.md",
+          "questions": "questions/network-manager-2/02-tcpip.json"
+        },
+        {
+          "order": 3,
+          "title": "NOS",
+          "file": "network-manager-2/03-nos.md",
+          "questions": "questions/network-manager-2/03-nos.json"
+        },
+        {
+          "order": 4,
+          "title": "네트워크 운용기기",
+          "file": "network-manager-2/04-network-devices.md",
+          "questions": "questions/network-manager-2/04-network-devices.json"
+        },
+        {
+          "order": 5,
+          "title": "보강: 정보보안·최신 기술",
+          "file": "network-manager-2/05-security-trends.md",
+          "questions": "questions/network-manager-2/05-security-trends.json",
+          "supplement": true
+        }
+      ]
+    },
+    {
+      "id": "linux-master-2",
+      "title": "리눅스마스터 2급",
+      "organizer": "한국정보통신진흥협회(KAIT)",
+      "subjects": [
+        {
+          "order": 1,
+          "title": "리눅스 일반",
+          "file": "linux-master-2/01-linux-general.md",
+          "questions": "questions/linux-master-2/01-linux-general.json"
+        },
+        {
+          "order": 2,
+          "title": "리눅스 운영 및 관리",
+          "file": "linux-master-2/02-admin.md",
+          "questions": "questions/linux-master-2/02-admin.json"
+        },
+        {
+          "order": 3,
+          "title": "리눅스 활용",
+          "file": "linux-master-2/03-utilization.md",
+          "questions": "questions/linux-master-2/03-utilization.json"
+        },
+        {
+          "order": 4,
+          "title": "보강: Rocky Linux 8 변경점",
+          "file": "linux-master-2/04-rocky8-update.md",
+          "questions": "questions/linux-master-2/04-rocky8-update.json",
+          "supplement": true
+        }
+      ]
+    }
+  ]
+}
