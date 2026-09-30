@@ -22,6 +22,21 @@
     {"id": "lg-17", "topic": "커널 모듈", "q": "현재 로드된 커널 모듈 목록을 보는 명령은?", "c": ["modprobe", "insmod", "depmod", "lsmod"], "a": 3, "e": "modprobe 는 의존성을 고려해 적재, insmod 는 단일 적재, rmmod 는 제거입니다."},
     {"id": "lg-18", "topic": "스왑", "q": "스왑 영역을 활성화하는 명령은?", "c": ["swapon", "free", "mkswap", "swapoff"], "a": 0, "e": "mkswap 으로 초기화한 뒤 swapon 으로 활성화합니다."},
     {"id": "lg-19", "topic": "로그", "q": "부팅 시 커널이 출력한 메시지를 확인하는 명령은?", "c": ["uptime", "last", "dmesg", "history"], "a": 2, "e": "dmesg 는 커널 링 버퍼 메시지를 보여줍니다."},
-    {"id": "lg-20", "topic": "로그", "q": "사용자의 로그인 이력을 보여주는 명령은?", "c": ["uname", "last", "who -b", "id"], "a": 1, "e": "last 는 /var/log/wtmp 를 읽어 로그인 이력을 출력합니다."}
+    {"id": "lg-20", "topic": "로그", "q": "사용자의 로그인 이력을 보여주는 명령은?", "c": ["uname", "last", "who -b", "id"], "a": 1, "e": "last 는 /var/log/wtmp 를 읽어 로그인 이력을 출력합니다."},
+    {"id": "lg-21", "topic": "GNU", "q": "GNU 프로젝트의 목표는?", "c": ["상용 유닉스 판매", "리눅스 배포판 인증", "자유 소프트웨어로 구성된 유닉스 호환 운영체제 개발", "리눅스 커널 개발"], "a": 2, "e": "리처드 스톨만이 시작했고 리눅스 커널과 결합해 GNU/Linux 가 되었습니다."},
+    {"id": "lg-22", "topic": "명령어", "q": "현재 실행 중인 커널 버전을 확인하는 명령은?", "c": ["hostname -r", "uname -r", "uname -n", "ver"], "a": 1, "e": "-r 커널 릴리스, -a 전체 정보, -n 호스트 이름입니다."},
+    {"id": "lg-23", "topic": "패키지", "q": "설치된 모든 rpm 패키지 목록을 보는 명령은?", "c": ["rpm -V", "rpm -qa", "rpm -ivh", "rpm -e"], "a": 1, "e": "-q 는 질의, -a 는 전체를 의미합니다."},
+    {"id": "lg-24", "topic": "GRUB", "q": "GRUB2 설정을 변경한 후 BIOS 환경에서 grub.cfg 를 재생성하는 명령은?", "c": ["grub-install /dev/sda1", "update-rc.d grub", "grub2-mkconfig -o /boot/grub2/grub.cfg", "mkinitrd grub"], "a": 2, "e": "/etc/default/grub 수정 후 실행합니다. Debian 계열은 update-grub 입니다."},
+    {"id": "lg-25", "topic": "스왑", "q": "스왑 영역으로 사용하는 파티션의 파일시스템 유형은?", "c": ["ext4", "xfs", "vfat", "swap"], "a": 3, "e": "mkswap 으로 초기화하며 fdisk 파티션 ID 는 82 입니다."},
+    {"id": "lg-26", "topic": "런레벨", "q": "현재 런레벨을 확인하는 명령은?", "c": ["telinit", "runlevel", "chkconfig", "init -v"], "a": 1, "e": "who -r 로도 확인할 수 있으며 systemd 에서는 systemctl get-default 입니다."},
+    {"id": "lg-27", "topic": "쉘", "q": "시스템에서 사용 가능한 로그인 쉘 목록이 기록된 파일은?", "c": ["/etc/profile", "/etc/shells", "/etc/passwd", "/etc/bashrc"], "a": 1, "e": "chsh 로 변경 가능한 쉘이 등록되어 있습니다."},
+    {"id": "lg-28", "topic": "history", "q": "bash 에서 직전에 실행한 명령을 다시 실행하는 단축 표현은?", "c": ["!?", "!$", "!!", "!*"], "a": 2, "e": "!! 는 직전 명령 재실행, !n 은 history 의 n번 명령 재실행입니다."},
+    {"id": "lg-29", "topic": "alias", "q": "ls -l 을 ll 이라는 이름으로 줄여 쓰도록 설정하는 명령은?", "c": ["set ll ls -l", "link ll='ls -l'", "alias ll='ls -l'", "export ll='ls -l'"], "a": 2, "e": "영구 적용은 ~/.bashrc 에 기록합니다."},
+    {"id": "lg-30", "topic": "명령어", "q": "명령어의 실행 파일 경로를 PATH 에서 찾아 보여주는 명령은?", "c": ["locate -r", "whoami", "whatis", "which"], "a": 3, "e": "whereis 는 실행 파일·소스·man 페이지 위치를 함께 보여줍니다."},
+    {"id": "lg-31", "topic": "명령어", "q": "파일의 마지막 5줄만 출력하는 명령은?", "c": ["tac -n5 file", "head -n 5 file", "cat -5 file", "tail -n 5 file"], "a": 3, "e": "head 는 앞부분, tail 은 뒷부분을 출력합니다."},
+    {"id": "lg-32", "topic": "명령어", "q": "디렉터리와 그 하위 내용을 강제로 삭제하는 명령은?", "c": ["rm -rf dir", "rm -d dir", "del /s dir", "rmdir -rf dir"], "a": 0, "e": "rmdir 와 rm -d 는 빈 디렉터리만 삭제합니다. rm -rf 는 확인 없이 삭제하므로 주의해야 합니다."},
+    {"id": "lg-33", "topic": "명령어", "q": "빈 파일을 생성하거나 기존 파일의 수정 시간을 갱신하는 명령은?", "c": ["mkfile", "create", "nano -n", "touch"], "a": 3, "e": "touch 는 파일이 없으면 생성하고 있으면 타임스탬프를 갱신합니다."},
+    {"id": "lg-34", "topic": "명령어", "q": "파일 이름을 변경하는 명령은?", "c": ["mv old new", "cp -m old new", "rename 만 가능하다", "ren old new"], "a": 0, "e": "mv 는 이동과 이름 변경 모두에 사용합니다."},
+    {"id": "lg-35", "topic": "리눅스 특징", "q": "리눅스의 일반적인 특징이 아닌 것은?", "c": ["단일 사용자·단일 작업만 지원한다", "멀티유저와 멀티태스킹을 지원한다", "소스 코드가 공개되어 있다", "다양한 하드웨어 플랫폼을 지원한다"], "a": 0, "e": "리눅스는 다중 사용자·다중 작업 운영체제입니다."}
   ]
 }

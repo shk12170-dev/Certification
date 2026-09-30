@@ -21,7 +21,7 @@ content/
   index.json           웹앱용 목차 (자격증 → 과목 → 노트/문제)
   network-manager-2/   01 네트워크 일반 · 02 TCP/IP · 03 NOS · 04 운용기기 · 05 보강(정보보안·신기술)
   linux-master-2/      01 일반 · 02 운영·관리 · 03 활용 · 04 보강(Rocky Linux 8 변경점)
-  questions/           과목별 문제은행 JSON (4지선다, 182문항)
+  questions/           과목별 문제은행 JSON (4지선다, 317문항)
 scripts/validate_questions.py
 ```
 
@@ -39,5 +39,5 @@ python3 scripts/validate_questions.py --shuffle 새파일.json   # 새로 추가
 
 ## 상태
 - 이론 노트 9개: 직접 정리한 요약이며 기출·교재 복제 아님
-- 예상문제 182문항(직접 작성)
+- 예상문제 317문항(직접 작성)
 - ⚠️ 시험 일정·문항 수·출제기준 변경은 공식 사이트 미확인(❓) 항목이 있음 → `docs/exam-info.md`
