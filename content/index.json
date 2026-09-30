@@ -1,0 +1,26 @@
+{
+  "updated": "2026-09-30",
+  "certs": [
+    {
+      "id": "network-manager-2",
+      "title": "네트워크관리사 2급",
+      "organizer": "한국정보통신자격협회(ICQA)",
+      "subjects": [
+        { "order": 1, "title": "네트워크 일반", "file": "network-manager-2/01-network-basics.md" },
+        { "order": 2, "title": "TCP/IP", "file": "network-manager-2/02-tcpip.md" },
+        { "order": 3, "title": "NOS", "file": "network-manager-2/03-nos.md" },
+        { "order": 4, "title": "네트워크 운용기기", "file": "network-manager-2/04-network-devices.md" }
+      ]
+    },
+    {
+      "id": "linux-master-2",
+      "title": "리눅스마스터 2급",
+      "organizer": "한국정보통신진흥협회(KAIT)",
+      "subjects": [
+        { "order": 1, "title": "리눅스 일반", "file": "linux-master-2/01-linux-general.md" },
+        { "order": 2, "title": "리눅스 운영 및 관리", "file": "linux-master-2/02-admin.md" },
+        { "order": 3, "title": "리눅스 활용", "file": "linux-master-2/03-utilization.md" }
+      ]
+    }
+  ]
+}
