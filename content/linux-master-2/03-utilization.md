@@ -16,6 +16,8 @@ order: 3
 - 오피스/응용: LibreOffice, Firefox, Thunderbird, GIMP
 
 ## 2. 네트워크 설정
+> ⚠️ 아래는 CentOS 6/7 스타일 설정입니다. RHEL 8 계열(Rocky 8)은 **NetworkManager/nmcli, firewalld, chrony** 가 기본이므로 `04-rocky8-update.md` 의 대응표를 함께 학습하세요.
+
 - `ifconfig`(구) / `ip addr`, `ip link`, `ip route`, `ip a add 192.168.1.10/24 dev eth0`
 - `ifup/ifdown`, `nmcli`, `nmtui`, NetworkManager
 - RHEL 설정 파일: `/etc/sysconfig/network-scripts/ifcfg-eth0`
@@ -78,6 +80,8 @@ order: 3
 - NTP/chrony, 프록시 **Squid**(3128), 데이터베이스 MySQL/MariaDB(3306)·PostgreSQL(5432), 프린터 **CUPS**(631, `lpr`, `lpq`, `lprm`, `lpstat`), LDAP, 가상화(KVM), 컨테이너(Docker) 개요
 
 ## 5. 방화벽 · 보안
+> RHEL 8 계열 기본은 firewalld(nftables 백엔드)입니다. iptables 는 구형 출제 대비로 함께 암기하세요.
+
 - **iptables**: 테이블 filter/nat/mangle, 체인 INPUT / OUTPUT / FORWARD / PREROUTING / POSTROUTING
   ```
   iptables -L -n -v

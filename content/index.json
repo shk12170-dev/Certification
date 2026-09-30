@@ -29,6 +29,13 @@
           "title": "네트워크 운용기기",
           "file": "network-manager-2/04-network-devices.md",
           "questions": "questions/network-manager-2/04-network-devices.json"
+        },
+        {
+          "order": 5,
+          "title": "보강: 정보보안·최신 기술",
+          "file": "network-manager-2/05-security-trends.md",
+          "questions": "questions/network-manager-2/05-security-trends.json",
+          "supplement": true
         }
       ]
     },
@@ -54,6 +61,13 @@
           "title": "리눅스 활용",
           "file": "linux-master-2/03-utilization.md",
           "questions": "questions/linux-master-2/03-utilization.json"
+        },
+        {
+          "order": 4,
+          "title": "보강: Rocky Linux 8 변경점",
+          "file": "linux-master-2/04-rocky8-update.md",
+          "questions": "questions/linux-master-2/04-rocky8-update.json",
+          "supplement": true
         }
       ]
     }

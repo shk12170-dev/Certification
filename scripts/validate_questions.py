@@ -3,7 +3,7 @@
 
 사용법:
   python3 scripts/validate_questions.py            # 검증만
-  python3 scripts/validate_questions.py --shuffle  # 선택지 순서를 섞어 저장 (새 문항 추가 직후에만 사용)
+  python3 scripts/validate_questions.py --shuffle 경로.json ...  # 지정한 새 파일만 보기 순서 섞기
 """
 import json
 import random
@@ -54,13 +54,18 @@ def shuffle(path, data):
 
 
 def main():
-    do_shuffle = "--shuffle" in sys.argv
+    args = sys.argv[1:]
+    targets = set()
+    if "--shuffle" in args:
+        targets = {Path(a).resolve() for a in args if a != "--shuffle"}
+        if not targets:
+            sys.exit("--shuffle 은 대상 .json 파일 경로를 함께 지정해야 합니다 (이미 섞인 파일 재섞기 방지)")
     files = sorted(ROOT.rglob("*.json"))
     errors, seen, dist, total = [], set(), Counter(), 0
     for path in files:
         data = load(path)
         errors += validate(path, data, seen)
-        if do_shuffle and not errors:
+        if path.resolve() in targets and not errors:
             shuffle(path, data)
             data = load(path)
         for q in data["questions"]:
