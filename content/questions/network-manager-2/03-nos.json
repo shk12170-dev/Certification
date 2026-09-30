@@ -1,0 +1,27 @@
+{
+  "cert": "network-manager-2",
+  "subject": "NOS",
+  "note": "content/network-manager-2/03-nos.md",
+  "questions": [
+    {"id": "os-01", "topic": "운영체제", "q": "교착상태(Deadlock)가 발생하기 위한 필요 조건이 아닌 것은?", "c": ["비선점", "상호 배제", "선점", "점유와 대기"], "a": 2, "e": "4조건은 상호배제, 점유와 대기, 비선점, 환형 대기입니다."},
+    {"id": "os-02", "topic": "Windows 권한", "q": "NTFS 권한은 '읽기', 공유 권한은 '모든 권한' 일 때 네트워크를 통한 실제 유효 권한은?", "c": ["접근 불가", "쓰기", "읽기", "모든 권한"], "a": 2, "e": "NTFS 권한과 공유 권한이 함께 적용되면 더 제한적인 권한이 유효합니다."},
+    {"id": "os-03", "topic": "Windows 명령", "q": "윈도우에서 DHCP 로 할당받은 IP 를 갱신하는 명령은?", "c": ["ipconfig /renew", "ipconfig /all", "ipconfig /release", "ipconfig /flushdns"], "a": 0, "e": "/release 는 반납, /renew 는 갱신, /flushdns 는 DNS 캐시 삭제입니다."},
+    {"id": "os-04", "topic": "Windows 명령", "q": "윈도우의 DNS 리졸버 캐시를 삭제하는 명령은?", "c": ["arp -d", "nslookup", "ipconfig /displaydns", "ipconfig /flushdns"], "a": 3, "e": "ipconfig /flushdns 로 DNS 캐시를 비웁니다."},
+    {"id": "os-05", "topic": "Windows 명령", "q": "목적지까지 거치는 라우터 경로를 추적하는 윈도우 명령은?", "c": ["ping", "tracert", "netstat", "nbtstat"], "a": 1, "e": "리눅스에서는 traceroute 입니다."},
+    {"id": "os-06", "topic": "Windows 명령", "q": "현재 열려 있는 포트와 연결 상태를 숫자 형식으로 확인하는 명령은?", "c": ["net share", "netstat -an", "route print", "arp -a"], "a": 1, "e": "netstat -an 은 모든 연결과 대기 포트를 숫자로 보여줍니다."},
+    {"id": "os-07", "topic": "Active Directory", "q": "그룹 정책(GPO)의 적용 순서(LSDOU)에서 가장 먼저 적용되는 것은?", "c": ["로컬", "도메인", "OU", "사이트"], "a": 0, "e": "로컬 → 사이트 → 도메인 → OU 순서이며 나중에 적용된 것이 우선합니다."},
+    {"id": "os-08", "topic": "Active Directory", "q": "도메인 컨트롤러의 주요 역할은?", "c": ["IP 주소 변환", "메일 중계", "사용자 인증과 계정의 중앙 관리", "웹 페이지 호스팅"], "a": 2, "e": "AD DS 의 도메인 컨트롤러는 인증(Kerberos)과 디렉터리 서비스를 제공합니다."},
+    {"id": "os-09", "topic": "Windows 서비스", "q": "원격 데스크톱(RDP)의 기본 포트는?", "c": ["22", "445", "3389", "3306"], "a": 2, "e": "RDP 3389, SMB 445, MySQL 3306 입니다."},
+    {"id": "os-10", "topic": "유닉스 권한", "q": "chmod 754 를 적용한 파일의 권한 표기는?", "c": ["rwxr-xr-x", "rwxr-xr--", "rwxrw-r--", "rw-r-xr--"], "a": 1, "e": "7=rwx, 5=r-x, 4=r-- 입니다."},
+    {"id": "os-11", "topic": "유닉스 계정", "q": "리눅스에서 사용자 암호의 해시 값이 저장되는 파일은?", "c": ["/etc/group", "/etc/passwd", "/etc/login.defs", "/etc/shadow"], "a": 3, "e": "/etc/shadow 는 root 만 읽을 수 있습니다."},
+    {"id": "os-12", "topic": "유닉스 권한", "q": "umask 가 022 일 때 새로 생성되는 일반 파일의 기본 권한은?", "c": ["666", "644", "755", "600"], "a": 1, "e": "파일 기본 666 에서 022 를 빼면 644, 디렉터리는 777 - 022 = 755 입니다."},
+    {"id": "os-13", "topic": "유닉스 프로세스", "q": "kill -9 PID 의 의미는?", "c": ["프로세스 강제 종료", "프로세스 일시 정지", "프로세스 재시작", "프로세스 우선순위 변경"], "a": 0, "e": "9번 SIGKILL 은 무시할 수 없는 강제 종료 시그널입니다."},
+    {"id": "os-14", "topic": "RAID", "q": "디스크를 이중으로 복제하여 저장하는 RAID 레벨은?", "c": ["RAID 1", "RAID 0", "RAID 6", "RAID 5"], "a": 0, "e": "RAID 1 은 미러링, RAID 0 은 스트라이핑입니다."},
+    {"id": "os-15", "topic": "RAID", "q": "RAID 5 를 구성하기 위해 필요한 최소 디스크 수는?", "c": ["3개", "4개", "2개", "5개"], "a": 0, "e": "RAID 5 는 분산 패리티를 사용하며 최소 3개가 필요합니다."},
+    {"id": "os-16", "topic": "메모리", "q": "가장 오랫동안 사용되지 않은 페이지를 교체하는 알고리즘은?", "c": ["FIFO", "OPT", "LFU", "LRU"], "a": 3, "e": "LRU(Least Recently Used)는 최근 사용 시간 기준, LFU 는 사용 빈도 기준입니다."},
+    {"id": "os-17", "topic": "유닉스 명령", "q": "ls -l 출력에서 파일 유형 문자가 'd' 인 것은?", "c": ["심볼릭 링크", "블록 장치", "디렉터리", "일반 파일"], "a": 2, "e": "- 일반, d 디렉터리, l 링크, b 블록, c 문자 장치입니다."},
+    {"id": "os-18", "topic": "스케줄링", "q": "시간 할당량(Time Quantum)을 두고 순환하며 CPU 를 할당하는 스케줄링은?", "c": ["FCFS", "우선순위", "SJF", "라운드 로빈"], "a": 3, "e": "라운드 로빈은 시분할 시스템에 적합합니다."},
+    {"id": "os-19", "topic": "유닉스 명령", "q": "리눅스에서 새 사용자 계정을 생성하는 명령은?", "c": ["usermod", "chage", "passwd", "useradd"], "a": 3, "e": "useradd 로 생성하고 passwd 로 암호를 설정합니다."},
+    {"id": "os-20", "topic": "유닉스 디렉터리", "q": "시스템 로그 등 자주 변하는 데이터가 저장되는 디렉터리는?", "c": ["/bin", "/boot", "/var", "/etc"], "a": 2, "e": "/var 는 로그(/var/log), 메일 스풀 등 가변 데이터를 저장합니다."}
+  ]
+}

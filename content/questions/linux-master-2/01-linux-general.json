@@ -1,0 +1,27 @@
+{
+  "cert": "linux-master-2",
+  "subject": "리눅스 일반",
+  "note": "content/linux-master-2/01-linux-general.md",
+  "questions": [
+    {"id": "lg-01", "topic": "리눅스 이해", "q": "1991년 리눅스 커널을 처음 공개한 사람은?", "c": ["켄 톰슨", "리처드 스톨만", "리누스 토르발스", "데니스 리치"], "a": 2, "e": "리누스 토르발스가 커널을 개발했고, 스톨만은 GNU 프로젝트와 FSF 를 창립했습니다."},
+    {"id": "lg-02", "topic": "라이선스", "q": "GPL 라이선스에 대한 설명으로 옳은 것은?", "c": ["상업적 이용이 금지된다", "파생물도 동일하게 GPL 로 공개해야 한다", "수정이 금지된다", "소스 공개 의무가 없다"], "a": 1, "e": "GPL 은 카피레프트 라이선스로 파생 저작물에도 GPL 을 적용해야 합니다."},
+    {"id": "lg-03", "topic": "배포판", "q": "Red Hat 계열 배포판의 기본 패키지 형식은?", "c": ["pacman", "deb", "rpm", "ebuild"], "a": 2, "e": "Red Hat 계열은 rpm(yum/dnf), Debian 계열은 deb(dpkg/apt) 입니다."},
+    {"id": "lg-04", "topic": "배포판", "q": "다음 중 Debian 계열 배포판은?", "c": ["Ubuntu", "CentOS", "Rocky Linux", "Fedora"], "a": 0, "e": "Ubuntu 는 Debian 기반입니다."},
+    {"id": "lg-05", "topic": "파티션", "q": "MBR 파티션 방식에서 만들 수 있는 기본(주) 파티션의 최대 개수는?", "c": ["4개", "2개", "128개", "8개"], "a": 0, "e": "기본 파티션 4개(또는 기본 3개 + 확장 1개)까지 가능합니다. GPT 는 128개입니다."},
+    {"id": "lg-06", "topic": "장치명", "q": "두 번째 SATA 디스크의 첫 번째 파티션을 나타내는 장치명은?", "c": ["/dev/sdb1", "/dev/sda2", "/dev/hdb1", "/dev/sda1"], "a": 0, "e": "두 번째 디스크는 sdb, 첫 번째 파티션은 1 입니다."},
+    {"id": "lg-07", "topic": "파티션", "q": "MBR 디스크에서 첫 번째 논리 파티션의 번호는?", "c": ["/dev/sda5", "/dev/sda3", "/dev/sda4", "/dev/sda6"], "a": 0, "e": "1~4 는 기본/확장 파티션용이며 논리 파티션은 5 부터 시작합니다."},
+    {"id": "lg-08", "topic": "부팅", "q": "리눅스에서 주로 사용하는 부트 로더는?", "c": ["BOOTMGR", "GRUB", "UEFI Shell", "NTLDR"], "a": 1, "e": "GRUB/GRUB2 가 표준이며 LILO 는 구형입니다."},
+    {"id": "lg-09", "topic": "런레벨", "q": "멀티유저 CLI 모드에 해당하는 런레벨은?", "c": ["5", "3", "1", "6"], "a": 1, "e": "0 종료, 1 단일 사용자, 3 CLI 다중 사용자, 5 GUI, 6 재부팅입니다."},
+    {"id": "lg-10", "topic": "런레벨", "q": "런레벨 6 이 의미하는 것은?", "c": ["재부팅", "시스템 종료", "단일 사용자 모드", "GUI 모드"], "a": 0, "e": "런레벨 0 은 종료, 6 은 재부팅입니다."},
+    {"id": "lg-11", "topic": "systemd", "q": "systemd 에서 기본 부팅 타깃을 GUI 로 설정하는 명령은?", "c": ["init 5", "systemctl isolate multi-user.target", "systemctl set-default graphical.target", "systemctl enable graphical"], "a": 2, "e": "set-default 는 영구 설정, isolate 와 init 은 현재 세션에만 적용됩니다."},
+    {"id": "lg-12", "topic": "프로세스", "q": "systemd 또는 init 프로세스의 PID 는?", "c": ["2", "1", "100", "0"], "a": 1, "e": "부팅 후 커널이 처음 실행하는 사용자 공간 프로세스로 PID 1 입니다."},
+    {"id": "lg-13", "topic": "종료", "q": "시스템을 즉시 재부팅하는 명령으로 옳은 것은?", "c": ["shutdown -r now", "shutdown -h now", "halt", "init 0"], "a": 0, "e": "-r 은 reboot, -h 는 halt(종료)입니다."},
+    {"id": "lg-14", "topic": "도움말", "q": "man 페이지의 섹션 중 설정 파일 형식을 설명하는 섹션 번호는?", "c": ["3", "1", "5", "8"], "a": 2, "e": "1 일반 명령, 3 라이브러리, 5 설정 파일, 8 관리 명령입니다."},
+    {"id": "lg-15", "topic": "명령어", "q": "현재 작업 디렉터리의 절대 경로를 출력하는 명령은?", "c": ["whoami", "ls", "pwd", "cd"], "a": 2, "e": "pwd 는 print working directory 입니다."},
+    {"id": "lg-16", "topic": "명령어", "q": "숨김 파일(점으로 시작)까지 모두 출력하는 옵션은?", "c": ["ls -R", "ls -a", "ls -l", "ls -h"], "a": 1, "e": "-a 는 all, -l 은 자세히, -R 은 재귀입니다."},
+    {"id": "lg-17", "topic": "커널 모듈", "q": "현재 로드된 커널 모듈 목록을 보는 명령은?", "c": ["modprobe", "insmod", "depmod", "lsmod"], "a": 3, "e": "modprobe 는 의존성을 고려해 적재, insmod 는 단일 적재, rmmod 는 제거입니다."},
+    {"id": "lg-18", "topic": "스왑", "q": "스왑 영역을 활성화하는 명령은?", "c": ["swapon", "free", "mkswap", "swapoff"], "a": 0, "e": "mkswap 으로 초기화한 뒤 swapon 으로 활성화합니다."},
+    {"id": "lg-19", "topic": "로그", "q": "부팅 시 커널이 출력한 메시지를 확인하는 명령은?", "c": ["uptime", "last", "dmesg", "history"], "a": 2, "e": "dmesg 는 커널 링 버퍼 메시지를 보여줍니다."},
+    {"id": "lg-20", "topic": "로그", "q": "사용자의 로그인 이력을 보여주는 명령은?", "c": ["uname", "last", "who -b", "id"], "a": 1, "e": "last 는 /var/log/wtmp 를 읽어 로그인 이력을 출력합니다."}
+  ]
+}

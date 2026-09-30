@@ -1,0 +1,27 @@
+{
+  "cert": "network-manager-2",
+  "subject": "네트워크 운용기기",
+  "note": "content/network-manager-2/04-network-devices.md",
+  "questions": [
+    {"id": "dv-01", "topic": "장비", "q": "브로드캐스트 도메인을 분리하는 대표적인 네트워크 장비는?", "c": ["허브", "리피터", "브리지", "라우터"], "a": 3, "e": "라우터(와 VLAN)가 브로드캐스트 도메인을 분리합니다."},
+    {"id": "dv-02", "topic": "장비", "q": "허브가 동작하는 OSI 계층은?", "c": ["물리 계층", "데이터링크 계층", "네트워크 계층", "전송 계층"], "a": 0, "e": "허브와 리피터는 1계층, 스위치와 브리지는 2계층 장비입니다."},
+    {"id": "dv-03", "topic": "스위치", "q": "스위치가 MAC 주소 테이블을 학습할 때 기록하는 주소는?", "c": ["수신 프레임의 출발지 MAC", "출발지 IP", "목적지 IP", "수신 프레임의 목적지 MAC"], "a": 0, "e": "프레임의 출발지 MAC 주소와 들어온 포트를 매핑해 학습합니다."},
+    {"id": "dv-04", "topic": "스위치", "q": "스위치가 목적지 MAC 주소를 테이블에서 찾지 못했을 때의 동작은?", "c": ["라우터에 문의한다", "프레임을 폐기한다", "ARP 요청을 보낸다", "들어온 포트를 제외한 모든 포트로 전송(플러딩)한다"], "a": 3, "e": "알 수 없는 유니캐스트는 플러딩합니다."},
+    {"id": "dv-05", "topic": "스위치", "q": "프레임 전체를 수신하여 CRC 오류를 검사한 후 전달하는 스위칭 방식은?", "c": ["Store-and-Forward", "Flooding", "Fragment-free", "Cut-through"], "a": 0, "e": "Store-and-Forward 는 안전하지만 지연이 큽니다."},
+    {"id": "dv-06", "topic": "VLAN", "q": "802.1Q 에서 VLAN ID 로 사용할 수 있는 일반 범위는?", "c": ["1 ~ 4094", "0 ~ 255", "1 ~ 65535", "1 ~ 1005"], "a": 0, "e": "VLAN ID 는 12비트이며 일반적으로 1~4094 를 사용합니다."},
+    {"id": "dv-07", "topic": "STP", "q": "STP 포트 상태의 전이 순서로 올바른 것은?", "c": ["Listening → Blocking → Learning → Forwarding", "Blocking → Listening → Learning → Forwarding", "Blocking → Learning → Listening → Forwarding", "Learning → Listening → Blocking → Forwarding"], "a": 1, "e": "Blocking → Listening → Learning → Forwarding 입니다."},
+    {"id": "dv-08", "topic": "STP", "q": "STP 에서 루트 브리지는 어떤 기준으로 선출되는가?", "c": ["가장 낮은 Bridge ID", "가장 빠른 링크 속도", "가장 높은 Bridge ID", "가장 많은 포트 수"], "a": 0, "e": "Bridge ID(우선순위 + MAC)가 가장 낮은 스위치가 루트 브리지가 됩니다."},
+    {"id": "dv-09", "topic": "라우터 CLI", "q": "Cisco 라우터 특권 EXEC 모드의 프롬프트는?", "c": ["Router(config)#", "Router(config-if)#", "Router#", "Router>"], "a": 2, "e": "> 는 사용자 모드, # 는 특권 모드입니다."},
+    {"id": "dv-10", "topic": "라우터 CLI", "q": "사용자 모드에서 특권 모드로 진입하는 명령은?", "c": ["exit", "login", "configure terminal", "enable"], "a": 3, "e": "enable 로 특권 모드, configure terminal 로 전역 설정 모드에 진입합니다."},
+    {"id": "dv-11", "topic": "라우터 CLI", "q": "현재 실행 중인 설정을 NVRAM 에 저장하는 명령은?", "c": ["copy startup-config running-config", "copy running-config startup-config", "erase startup-config", "show running-config"], "a": 1, "e": "write memory 명령과 같은 효과입니다."},
+    {"id": "dv-12", "topic": "ACL", "q": "표준 ACL 의 번호 범위는?", "c": ["200 ~ 299", "1 ~ 255", "1 ~ 99", "100 ~ 199"], "a": 2, "e": "표준 1~99, 확장 100~199 이며 표준은 출발지 주소만 검사합니다."},
+    {"id": "dv-13", "topic": "ACL", "q": "ACL 의 마지막에 암묵적으로 존재하는 규칙은?", "c": ["permit any", "deny any", "없다", "log any"], "a": 1, "e": "일치하는 규칙이 없으면 암묵적 deny any 로 차단됩니다."},
+    {"id": "dv-14", "topic": "ACL", "q": "서브넷 마스크 255.255.255.0 에 대응하는 와일드카드 마스크는?", "c": ["0.0.255.255", "255.255.255.0", "255.0.0.0", "0.0.0.255"], "a": 3, "e": "와일드카드 마스크는 서브넷 마스크를 반전한 값입니다."},
+    {"id": "dv-15", "topic": "VPN", "q": "IPsec 프로토콜 중 데이터 암호화 기능을 제공하는 것은?", "c": ["AH", "ISAKMP", "ESP", "IKE"], "a": 2, "e": "AH 는 인증·무결성만, ESP 는 암호화까지 제공합니다."},
+    {"id": "dv-16", "topic": "보안장비", "q": "IDS 와 비교한 IPS 의 가장 큰 차이는?", "c": ["로그만 기록한다", "인라인으로 배치되어 공격을 실시간 차단한다", "방화벽과 동일하다", "탐지만 수행한다"], "a": 1, "e": "IDS 는 탐지·경보, IPS 는 탐지 후 차단까지 수행합니다."},
+    {"id": "dv-17", "topic": "공격", "q": "TCP 연결 요청(SYN)을 대량 전송하여 반개방 연결을 고갈시키는 공격은?", "c": ["Smurf", "Teardrop", "SYN Flooding", "Ping of Death"], "a": 2, "e": "SYN Flooding 은 서버의 연결 대기 큐를 소진시키는 DoS 공격입니다."},
+    {"id": "dv-18", "topic": "공격", "q": "ICMP 브로드캐스트와 출발지 주소 위조를 이용해 증폭 공격을 하는 방식은?", "c": ["Bonk", "Teardrop", "Smurf", "Land"], "a": 2, "e": "Smurf 는 피해자 IP 로 위조한 ICMP Echo 요청을 브로드캐스트합니다."},
+    {"id": "dv-19", "topic": "SNMP", "q": "SNMP Trap 메시지가 사용하는 기본 포트는?", "c": ["TCP 162", "UDP 161", "TCP 161", "UDP 162"], "a": 3, "e": "질의는 UDP 161, Trap 은 UDP 162 입니다."},
+    {"id": "dv-20", "topic": "SNMP", "q": "SNMP 버전 중 인증과 암호화를 지원하여 보안이 강화된 버전은?", "c": ["v3", "v1", "v2c", "v4"], "a": 0, "e": "v1/v2c 는 평문 커뮤니티 문자열을 사용합니다."}
+  ]
+}
