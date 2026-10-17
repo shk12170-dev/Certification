@@ -362,6 +362,7 @@ Client                         Server
 ### HTTP
 - 요청 메서드: **GET, POST, PUT, DELETE, HEAD, OPTIONS, PATCH**
 - 상태 코드 (출제 포인트)
+
 | 코드 | 의미 |
 |---|---|
 | **200** | OK (성공) |
