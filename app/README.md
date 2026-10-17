@@ -42,3 +42,12 @@ python3 scripts/validate_questions.py --shuffle 새파일.json   # 새로 추가
 - 이론 노트 9개: 직접 정리한 요약이며 기출·교재 복제 아님
 - 예상문제 317문항(직접 작성)
 - ⚠️ 시험 일정·문항 수·출제기준 변경은 공식 사이트 미확인(❓) 항목이 있음 → `docs/exam-info.md`
+
+## PDF 재생성
+`pdf/` 의 PDF 는 Markdown 노트에서 `scripts/build_pdfs.py` 로 만듭니다 (읽기 편한 글자 크기, 표 행 분리 방지, 합본 목차·북마크).
+```
+pip install -r scripts/requirements-pdf.txt     # + Noto Sans KR, Nanum Gothic Coding 글꼴, Chromium
+python3 scripts/build_pdfs.py                   # 전체 재생성 (끝에 표 깨짐·토막 페이지 자동 검사)
+python3 scripts/build_pdfs.py --only 01_네트워크 # 일부만
+python3 scripts/build_pdfs.py --check           # 기존 PDF 검사만
+```
